@@ -1,139 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="Nelson Rosero" content="width=device-width, initial-scale=1.0">
-  <title>futbol</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>españa vs inglaterra</title>
 </head>
 <body>
-  <h1>Bienvenido a Mi Proyecto en futbol</h1>
-  <p>
-    Este es un ejemplo de un proyecto que utilizará texto, imágenes, audio, video y un juego interactivo creado con p5.js. 
-    Aquí es donde puedes comenzar a explorar cómo interactuar con diferentes tipos de medios en la web.
-  </p>
-
-  <p>
-    El texto es una parte fundamental de cualquier proyecto web. Puedes usarlo para dar contexto, instrucciones o simplemente añadir contenido descriptivo.
-  </p>
+    <h1 style="text-align: center;">españa vs inglaterra</h1>
+</body>
+<p>España derrotó 2-1 a Inglaterra para proclamarse campeón de la Euro 2024 este domingo 14 de julio en el Estadio Olímpico de Berlín. La Roja de Luis de la Fuente llegó a la Final tras eliminar a Georgia en Octavos de Final (4-1), al anfitrión Alemania en Cuartos de Final (2-1) y a Francia en Semifinales (2-1).(ver recuadro). <code>
+</html>
+<body>
+    <img src="https://www.elespectador.com/resizer/v2/OTNWE3HRBNDHTDF4C2KM7DTAYM.png?auth=605ec6f2ca428744cad93f28f966e429ae77564a350f9ec11ee18f5c25f118be&width=920&height=613&smart=true&quality=60" alt="Descripción de la imagen">
+ 
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyecto p5.js con Texto e Imagen</title>
+</style>
 </head>
 <body>
-  <h1>Bienvenido a Mi Proyecto en futbol</h1>
-  <p>
-    Este es un ejemplo de un proyecto que utilizará texto, imágenes, audio, video y un juego interactivo creado con p5.js. 
-    Aquí es donde puedes comenzar a explorar cómo interactuar con diferentes tipos de medios en la web.
-  </p>
-
-  <h2>Imagen</h2>
-  <p>
-    Aquí tienes una imagen de ejemplo que hemos añadido a nuestro proyecto:
-  </p>
-  <img src="https://www.google.com/search?q=imagenes+de+futbol&oq=imagenes+de+f&gs_lcrp=EgZjaHJvbWUqFQgBEAAYFBiHAhiLAxixAxiABBj4BTIGCAAQRRg5MhUIARAAGBQYhwIYiwMYsQMYgAQY-AUyDwgCEAAYFBiHAhiLAxiABDIKCAMQABixAxiABDIKCAQQABixAxiABDINCAUQABiLAxixAxiABDIGCAYQRRg8MgYIBxBFGDzSAQg2MjMzajFqNKgCALACAQ&sourceid=chrome&ie=UTF-8" alt="Ejemplo de Imagen" width="300">
-
-</body>
-</html>
-<h2>Audio</h2>
-<p>
-  A continuación, puedes escuchar un archivo de audio:
-</p>
-<audio controls>
-  <source src="file:///C:/Users/%C3%91a%C3%B1iela/Downloads/entrainement-football-19311.mp3" type="audio/mp3">
-  Tu navegador no soporta el elemento de audio.
-</audio>
-
-</body>
-</html>
-<h2>Video</h2>
-<p>
-  A continuación, puedes ver un archivo de video:
-</p>
-<video width="320" height="240" controls>
-  <source src="file:///C:/Users/%C3%91a%C3%B1iela/Downloads/6077718-uhd_3840_2160_25fps%20(1).mp4" type="video/mp4">
-  Tu navegador no soporta el elemento de video.
-</video>
-
-    <div id="timeDisplay">
-        <span>Hora actual: <data value="">Selecciona una ciudad</data></span>
-    </div>
-    
-    
-    <div class="image-container">
-        <img src="https://placehold.co/800x360" alt="Imagen de un carro">
-    </div>
-    
-    <div class="text-section">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-        <p>Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.</p>
-        <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-    </div>
-    
-    <div class="button-container">
-        <div style="background-color: #b3e5fc; padding: 50px;">
-            <button>Button</button>
-        </div>
-    </div>
-</main>
-
-<footer>
-<credit>
-    <p>Autor: Juan Diego Gutierrez</p>
-    </credit>    
-</footer>
-<script>
-   document.getElementById('citySelector').addEventListener('change', function() {
-    const city = this.value;
-    const apiUrl = `https://worldtimeapi.org/api/timezone/${city}`;
-
-    fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-            const datetime = data.datetime;
-            const timezone = data.timezone;
-
-            // Convert datetime to the local time of the selected city
-            const time = new Date(datetime).toLocaleString('en-US', {
-                hour: '2-digit',
-                minute: '2-digit',
-                hour12: true,
-                timeZone: timezone
-            });
-
-            const dataElement = document.querySelector('#timeDisplay data');
-            dataElement.setAttribute('value', datetime);
-            dataElement.textContent = time;
-
-            console.log('Time:', datetime);
-            console.log('Converted time:', time);
-            console.log('City selected:', this.value);
-
-            updateBackground(time);      
-
-
-        })
-        .catch(error => {
-            console.error('Error fetching the time:', error);
-        });
-});
-function updateBackground(time) {
-        setTimeout(() => {
-            const body = document.querySelector('body');
-            if (time.includes('AM')) {
-                body.style.background = 'rgb(152,184,0)';
-                body.style.background = 'linear-gradient(0deg, rgba(152,184,0,1) 0%, rgba(0,237,255,1) 78%)';
-            } else if (time.includes('PM')) {
-                body.style.background = 'rgb(184,80,0)';
-                body.style.background = 'linear-gradient(0deg, rgba(184,80,0,1) 0%, rgba(0,67,72,1) 78%)';
-            }
-        }, 1000);
-    }
-</script>
-</body>
-</html>
+    <body>
+        <video controls>
+            <source src="https://archive.org/details/espana-vs-inglaterra-2024" type="video/mp4">
+            
+        </video>
+    </body>
+    </html>
